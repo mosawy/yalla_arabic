@@ -1,0 +1,234 @@
+.hero {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  color: var(--color-white);
+  padding: var(--spacing-3xl) 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.1;
+  background-image:
+    repeating-linear-gradient(45deg, transparent, transparent 35px, var(--color-white) 35px, var(--color-white) 70px);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-title {
+  font-size: 3rem;
+  color: var(--color-white);
+  margin-bottom: var(--spacing-md);
+  line-height: 1.2;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.95);
+  margin-bottom: var(--spacing-xl);
+  line-height: 1.6;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: var(--spacing-md);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.programs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.program-card {
+  text-align: center;
+  text-decoration: none;
+  color: var(--color-text-primary);
+}
+
+.program-icon {
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-sm);
+  display: flex;
+  justify-content: center;
+}
+
+.program-card h3 {
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.program-card p {
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+.differentiators-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-xl);
+}
+
+.differentiator-card {
+  text-align: center;
+}
+
+.differentiator-icon {
+  color: var(--color-accent);
+  margin-bottom: var(--spacing-sm);
+  display: flex;
+  justify-content: center;
+}
+
+.differentiator-card h3 {
+  margin-bottom: var(--spacing-sm);
+}
+
+.differentiator-card p {
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+.steps-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-xl);
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.step-card {
+  text-align: center;
+  position: relative;
+}
+
+.step-number {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+  color: var(--color-white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 auto var(--spacing-sm);
+}
+
+.step-icon {
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-sm);
+  display: flex;
+  justify-content: center;
+}
+
+.step-card h3 {
+  margin-bottom: var(--spacing-sm);
+}
+
+.step-card p {
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.testimonial-card {
+  text-align: center;
+}
+
+.testimonial-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto var(--spacing-md);
+  border: 3px solid var(--color-accent);
+}
+
+.testimonial-quote {
+  font-style: italic;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--spacing-md);
+  line-height: 1.6;
+}
+
+.testimonial-author {
+  margin-top: var(--spacing-sm);
+}
+
+.author-name {
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.author-info {
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+}
+
+.cta-section {
+  text-align: center;
+}
+
+.cta-content h2 {
+  color: var(--color-white);
+  font-size: 2.5rem;
+  margin-bottom: var(--spacing-md);
+}
+
+.cta-content p {
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 1.125rem;
+  margin-bottom: var(--spacing-xl);
+}
+
+.cta-buttons {
+  display: flex;
+  gap: var(--spacing-md);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.125rem;
+  }
+
+  .hero-buttons,
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .programs-grid,
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-content h2 {
+    font-size: 1.75rem;
+  }
+}
